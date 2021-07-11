@@ -11,14 +11,17 @@ const initialState = {
 const GlobalInfoContextProvider = (props) => {
 	const [info, setInfo] = useState(initialState);
 
-	function updateInfo (props) {
-		setInfo({ ...info, ...props })
+	function updateInfo(props) {
+		setInfo({ ...info, ...props });
 	}
 
 	useEffect(async () => {}, []);
 
 	return (
-		<GlobalInfoContext.Provider value={{info, updateInfo}} displayName="Userinfo">
+		<GlobalInfoContext.Provider
+			value={{ info, updateInfo }}
+			displayName="Userinfo"
+		>
 			{props.children}
 		</GlobalInfoContext.Provider>
 	);
