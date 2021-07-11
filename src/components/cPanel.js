@@ -31,7 +31,7 @@ export const ConfigPanel = ({
 						<Button className="primary">Minimum Amount</Button>
 					</div>
 					<div className="col-50">
-						<label>
+						<label data-testid="currency">
 							{minAmount} {currency}
 						</label>
 					</div>
